@@ -1,0 +1,27 @@
+function pairElement(str) {
+
+  var finalArr = [];
+  var input = str.split('');
+  for (var i = 0; i < input.length; i++) {
+
+    switch (input[i]) {
+
+      case "A":
+        finalArr.push(["A", "T"]);
+        break;
+      case "T":
+        finalArr.push(["T", "A"]);
+        break;
+      case "G":
+        finalArr.push(["G", "C"]);
+        break;
+      case "C":
+        finalArr.push(["C", "G"]);
+        break;
+      default: finalArr.push([]);
+    }
+  }
+  return finalArr;
+}
+
+pairElement("GCG");
